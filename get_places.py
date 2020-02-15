@@ -72,9 +72,9 @@ class Api:
         # получить рекомеендуемые виды спорта
         res = []
         gender = gender.lower()
-        if gender == 'м':
+        if gender in ['м', 'мужской']:
             gender = 'm'
-        elif gender == 'ж':
+        elif gender in ['ж', 'женский']:
             gender = 'f'
         if gender not in ['m', 'f']:
             return 'error'
